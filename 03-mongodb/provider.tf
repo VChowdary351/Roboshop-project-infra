@@ -7,7 +7,7 @@ terraform {
   }
     backend "s3" {
       bucket = "terraform-state-files-locking"
-      key    = "vpc-RS"
+      key    = "mongodb-RS"
       region = "us-east-1"
       dynamodb_table = "remote-state-file-locking-roboshop"
   }

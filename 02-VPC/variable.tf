@@ -46,26 +46,8 @@ variable "ingress_rules" {
     to_port     = 0
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
-  },
-
-#   {
-#     description = "allowing ssh"
-#     from_port   = 22
-#     to_port     = 22
-#     protocol    = "tcp"
-#     cidr_blocks = ["0.0.0.0/0"]
-#   },
-
-#   {
-
-#     description = "allowing https"
-#     from_port   = 443
-#     to_port     = 443
-#     protocol    = "tcp"
-#     cidr_blocks = ["0.0.0.0/0"]
-#   }
+        }
     ]
-  
 }
 
 variable "instances" {
