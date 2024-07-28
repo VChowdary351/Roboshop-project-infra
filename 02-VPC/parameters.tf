@@ -1,32 +1,32 @@
 resource "aws_ssm_parameter" "vpc_id" {
-    name = "/roboshop/dev/vpc_id"    #${var.project_name}/${var.env}/vpc_is
+    name = "${var.project_name}/${var.env}/vpc_id"    
     type = "String"
     value = local.vpc_id
   
 }
 
 resource "aws_ssm_parameter" "public_subnet_ids" {
-    name = "/roboshop/dev/public_subnet_ids"
+    name = "${var.project_name}/${var.env}/public_subnet_ids"
     type = "String"
     value = join(",", local.public_subnet_ids)
   
 }
 
 resource "aws_ssm_parameter" "private_subnet_ids" {
-    name = "/roboshop/dev/private_subnet_ids"
+    name = "${var.project_name}/${var.env}/private_subnet_ids"
     type = "String"
     value = join(",", local.private_subnet_ids)
   
 }
 
 resource "aws_ssm_parameter" "database_subnet_ids" {
-    name = "/roboshop/dev/database_subnet_ids"
+    name = "${var.project_name}/${var.env}/database_subnet_ids"
     type = "String"
     value = join(",", local.database_subnet_ids)
   
 }
-resource "aws_ssm_parameter" "allow_all_security_group_id" {
-    name = "/roboshop/dev/allow_all_security_group_id"
+resource "aws_ssm_parameter" "security_group_id" {
+    name = "${var.project_name}/${var.env}/security_group_id"
     type = "String"
     value = local.security_group_id
   
