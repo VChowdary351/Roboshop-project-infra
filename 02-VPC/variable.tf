@@ -2,6 +2,15 @@ variable "project_name" {
     default = "Roboshop"
   
 }
+variable "sg_name" {
+  default = "Roboshop-allow-all"
+}
+
+variable "sg_description" {
+    default = "Allowing traffic through VPN"
+  
+}
+
 variable "cidr_block" {
     default = "10.0.0.0/16"
   
@@ -30,14 +39,6 @@ variable "database_subnet_cidr" {
   
 }
 
-variable "sg_name" {
-    default  = "allow-all"
-  
-}
-variable "sg_description" {
-    default = "allowing all traffic from internet"
-  
-}
 variable "ingress_rules" {
     default = [
         {
